@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dark"
+    android:orientation="vertical"
+    tools:context="com.mrk.lib_usage.MainActivity">
+
+    <com.khapv.search_view.ExpandableSearchView
+        android:id="@+id/expandable_searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp" />
+
+    <com.mrk.circle_image_view.DiscShapeImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/disc_image"
+        android:visibility="visible" />
+
+    <com.mrk.view.indicator_seekbar.IndicatorStayLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp">
+
+        <com.mrk.view.indicator_seekbar.IndicatorSeekBar
+            android:id="@+id/indicator_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:isb_indicator_content_layout="@layout/layout_custom_seekbar_indicator"
+
+            app:isb_progress="0"
+            app:isb_seek_smoothly="true"
+            app:isb_show_indicator="custom"
+            app:isb_show_thumb_text="true"
+            app:isb_show_tick_marks_type="square"
+            app:isb_show_tick_texts="true"
+            app:isb_thumb_drawable="@drawable/line_tick_red"
+            app:isb_tick_marks_color="@color/red"
+            app:isb_tick_marks_drawable="@drawable/line_tick_blue"
+
+            app:isb_track_background_color="@color/transparent"
+            app:isb_track_background_size="0dp"
+            app:isb_track_progress_color="@color/transparent" /> />
+    </com.mrk.view.indicator_seekbar.IndicatorStayLayout>
+</LinearLayout>
