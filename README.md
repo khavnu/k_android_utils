@@ -3,5 +3,5 @@ This is common library
 2. Circle image like disc shape
 3. Expandable searchview
 
-Specical thank to:
+Special thank to:
 ...............
