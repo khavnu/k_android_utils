@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "KUtils"
-include ':app'
+include ':example'
 include ':indicator_seekbar'
 include ':expandable_searchview'
 include ':circurlar_image_view'
