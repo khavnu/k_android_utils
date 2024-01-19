@@ -207,6 +207,10 @@ public class ExpandableSearchView extends LinearLayout implements HorizontalExpa
         layoutSearch.setBackgroundResource(searchBoxBg);
     }
 
+    public void setDuration(int duration) {
+        expandableLayout.setDuration(duration);
+    }
+
     public void setOnSearchActionListener(OnSearchActionListener listener) {
         searchActionListener = listener;
     }
