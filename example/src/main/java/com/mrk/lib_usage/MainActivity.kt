@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.khapv.search_view.ExpandableSearchView
+import com.mrk.circle_image_view.RotateAbleDiscShapeImageView
 import com.mrk.kutils.R
 import com.mrk.view.indicator_seekbar.IndicatorSeekBar
 
@@ -20,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         testExpandableSearchView()
-
         testSeekBar()
+        testRotateImage()
     }
 
     private fun testExpandableSearchView() {
@@ -51,5 +52,27 @@ class MainActivity : AppCompatActivity() {
             tickCount = array_ends.size
             customTickTexts(array_ends)
         }
+    }
+
+    private fun testRotateImage() {
+        var rotateAbleDiscShapeImageView = findViewById<RotateAbleDiscShapeImageView>(R.id.rotate_image_view)
+        var imgToggleAnim = findViewById<ImageView>(R.id.toggle_play);
+        var imgStopAnim = findViewById<ImageView>(R.id.img_stop_anim)
+
+        imgToggleAnim?.setOnClickListener{
+            if(rotateAbleDiscShapeImageView.isAnimPausedOrStop) {
+                rotateAbleDiscShapeImageView.startOrResumeAnim()
+                imgToggleAnim.setImageResource(R.drawable.baseline_pause_circle_outline_24)
+            } else {
+                rotateAbleDiscShapeImageView.pauseAnim()
+                imgToggleAnim.setImageResource(R.drawable.baseline_play_circle_outline_24)
+            }
+        }
+
+        imgStopAnim.setOnClickListener{
+            rotateAbleDiscShapeImageView.cancelAnim()
+        }
+
+        imgToggleAnim?.performClick()
     }
 }

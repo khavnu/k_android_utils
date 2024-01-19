@@ -13,12 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp" />
 
     <com.mrk.circle_image_view.DiscShapeImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:src="@drawable/disc_image"
@@ -52,4 +52,32 @@
             app:isb_track_background_size="0dp"
             app:isb_track_progress_color="@color/transparent" /> />
     </com.mrk.view.indicator_seekbar.IndicatorStayLayout>
+
+    <com.mrk.circle_image_view.RotateAbleDiscShapeImageView
+        android:id="@+id/rotate_image_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/disc_image"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/toggle_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_play_circle_outline_24" />
+
+        <ImageView
+            android:id="@+id/img_stop_anim"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/baseline_stop_24" />
+    </LinearLayout>
 </LinearLayout>
